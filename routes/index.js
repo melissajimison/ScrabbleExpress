@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var Controller = require('../controller/scrabble')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', Controller.index);
+
+router.get('/scrabble/chart', Controller.chart)
 
 module.exports = router;
