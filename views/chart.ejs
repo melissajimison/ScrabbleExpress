@@ -23,7 +23,7 @@
             </button>
 
             <a class="navbar-brand" href="/">
-                <span class="glyphicon glyphicon-unchecked"></span>
+                <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
                 <%=locals.title%>
             </a>
           </div>
@@ -37,10 +37,13 @@
       </nav>
 
 
-      <h1><%= locals.title %></h1>
-      <p>Welcome to <%= locals.title %></p>
-      <img src="http://famfonts.com/images/scrabble-wide.png" alt="Scrabble">
 
+      <% for (var prop in locals.scores) { prop + " = " + locals.scores[prop]; };%>
+
+
+      <% for (var prop in locals.scores ) { %>
+        <%- prop + " = "+locals.scores[prop] %>
+      <% } %>
     </div>
 
   </body>
