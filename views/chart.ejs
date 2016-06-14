@@ -30,20 +30,17 @@
           <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li><a href="/scrabble/chart"><%=locals.menu[0]%></a></li>
-              <li><a href="/scrabble/score_a_word"><%=locals.menu[1]%></a></li>
+              <li><a href="/scrabble/score"><%=locals.menu[1]%></a></li>
             </ul>
           </div>
         </div>
       </nav>
 
-
-
+      <p>
       <% for (var prop in locals.scores) { prop + " = " + locals.scores[prop]; };%>
-
-
       <% for (var prop in locals.scores ) { %>
         <%- prop + " = "+locals.scores[prop] %>
-      <% } %>
+      <% } %></p>
     </div>
 
   </body>

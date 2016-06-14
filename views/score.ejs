@@ -23,7 +23,7 @@
             </button>
 
             <a class="navbar-brand" href="/">
-                <span class="glyphicon glyphicon-unchecked"></span>
+                <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
                 <%=locals.title%>
             </a>
           </div>
@@ -37,11 +37,18 @@
       </nav>
 
 
-      <h1><%= locals.title %></h1>
-      <p>Welcome to <%= locals.title %></p>
-      <img src="http://famfonts.com/images/scrabble-wide.png" alt="Scrabble">
+      <form method="post" action="points" class = "input-group input-group-lg">
+            <input type="text" name="word" class="form-control"/>
+              <span class="input-group-btn">
+            <input type='submit' class="btn btn-default" id='submit' value='Score a word'/>
+          </span>
+      </form>
+
+      <% if (locals.points) {%>
+       Score for <%- locals.word %> is <%- locals.points %>
+
+      <% }%>
 
     </div>
-
   </body>
 </html>
